@@ -13,6 +13,13 @@ const firebaseConfig = {
     measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 };
 
+if (!process.env.NEXT_PUBLIC_FIREBASE_API_KEY) {
+    console.warn("⚠️ WARNING: Firebase API Key is missing in environment variables!");
+    console.log("Check process.env:", Object.keys(process.env).filter(k => k.startsWith('NEXT_PUBLIC_')));
+} else {
+    console.log("✅ Firebase API Key found:", process.env.NEXT_PUBLIC_FIREBASE_API_KEY.slice(0, 5) + "...");
+}
+
 // Initialize Firebase
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 const auth = getAuth(app);
