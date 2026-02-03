@@ -1,7 +1,7 @@
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
-// import { getAnalytics } from "firebase/analytics"; 
+import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
     apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY || "mock_key",
@@ -26,9 +26,10 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 
 // Analytics can only be initialized on the client side
-// let analytics;
-// if (typeof window !== "undefined") {
-//   analytics = getAnalytics(app);
-// }
+// Analytics can only be initialized on the client side
+let analytics;
+if (typeof window !== "undefined") {
+    analytics = getAnalytics(app);
+}
 
-export { app, auth, db };
+export { app, auth, db, analytics };
