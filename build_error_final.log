@@ -1,0 +1,95 @@
+﻿
+> hotel_booking@0.1.0 build
+> next build
+
+node.exe : node:inter
+nal/modules/cjs/loade
+r:1386
+At line:1 char:1
++ & "C:\Program Files
+\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo 
+...
++ ~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: (node:in   
+ ternal/modules/c    
+js/loader:1386:S    
+tring) [], Remot    
+eException
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+  throw err;
+  ^
+
+Error: Cannot find 
+module 'styled-jsx/pa
+ckage.json'
+Require stack:
+- E:\testrun_vercel\n
+ode_modules\next\dist
+\server\require-hook.
+js
+- E:\testrun_vercel\n
+ode_modules\next\dist
+\bin\next
+    at Function._reso
+lveFilename (node:int
+ernal/modules/cjs/loa
+der:1383:15)
+    at resolve (node:
+internal/modules/help
+ers:157:19)
+    at 
+Object.<anonymous> (E
+:\testrun_vercel\node
+_modules\next\dist\se
+rver\require-hook.js:
+39:32)
+    at 
+Module._compile (node
+:internal/modules/cjs
+/loader:1706:14)
+    at Object..js (no
+de:internal/modules/c
+js/loader:1839:10)
+    at Module.load (n
+ode:internal/modules/
+cjs/loader:1441:32)
+    at 
+Function._load (node:
+internal/modules/cjs/
+loader:1263:12)
+    at TracingChannel
+.traceSync (node:diag
+nostics_channel:322:1
+4)
+    at 
+wrapModuleLoad (node:
+internal/modules/cjs/
+loader:237:24)
+    at 
+Module.require (node:
+internal/modules/cjs/
+loader:1463:12) {
+  code: 
+'MODULE_NOT_FOUND',
+  requireStack: [
+    'E:\\testrun_verc
+el\\node_modules\\nex
+t\\dist\\server\\requ
+ire-hook.js',
+    'E:\\testrun_verc
+el\\node_modules\\nex
+t\\dist\\bin\\next'
+  ]
+}
+
+Node.js v22.19.0
